@@ -24,3 +24,14 @@ employee = {
   name: 'John',
 };
 display(employee.id, employee.name);
+
+
+var nums:number = 1; // OK
+var nums:number = 2;// OK
+var nums:number = 3;// OK
+var nums:number = 4;// OK
+
+let num:number = 5;// Compiler Error: Cannot redeclared block-scoped variable 'num'
+let Num:number = 6;// Compiler Error: Cannot redeclared block-scoped variable 'Num'
+let NUM:number = 7;// Compiler Error: Cannot redeclared block-scoped variable 'NUM'
+let NuM:number = 8;// Compiler Error: Cannot redeclared block-scoped variable 'NuM'

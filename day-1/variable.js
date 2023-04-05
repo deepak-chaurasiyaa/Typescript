@@ -41,3 +41,23 @@ console.log(num1); // Compiler Error: error TS2448: Block-scoped variable 'num' 
 var num11 = 10;
 console.log(num2); // OK, Output: undefined
 var num2 = 10;
+// var num:number = 1; // OK
+// var Num:number = 2;// OK
+// var NUM:number = 3;// OK
+// var NuM:number = 4;// OK
+// let num:number = 5;// Compiler Error: Cannot redeclared block-scoped variable 'num'
+// let Num:number = 6;// Compiler Error: Cannot redeclared block-scoped variable 'Num'
+// let NUM:number = 7;// Compiler Error: Cannot redeclared block-scoped variable 'NUM'
+// let NuM:number = 8;// Compiler Error: Cannot redeclared block-scoped variable 'NuM'
+var num = 1;
+function demo() {
+    var num = 2;
+    if (true) {
+        var num_1 = 3;
+        console.log(num_1); //Output: 3
+    }
+    console.log(num); //Output: 2
+}
+console.log(num); //Output: 1
+demo();
+
